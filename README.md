@@ -1,24 +1,42 @@
 # vue-cli-template
 
-## Project setup
-```
+## 项目简介
+
+这是一个基于 `Vue CLI v4.5.6` 和 `Vue 2.x` 搭建的一个 Vue SPA 模板项目 📦。
+
+已经集成了以下功能：
+
+- [x] Vuex
+- [x] Vue Router (Use history mode)
+- [x] CSS Pre-processors: `Sass/SCSS (with node-sass)`
+- [x] Linter / Formatter: `ESLint + Stylelint + Prettier`
+- [x] Git Hooks: `husky + lint-staged`
+
+以下功能尚未集成：
+
+- [ ] TypeScript
+- [ ] Unit Testing
+- [ ] E2E Testing
+- [ ] Progressive Web App (PWA) Support
+
+## 快速开始
+
+```bash
+# install dependencies
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# Compiles and hot-reloads for development
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+# Compiles and minifies for production
 npm run build
-```
 
-### Lints and fixes files
-```
+# Lints and fixes files
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 部署
+
+PM2
+
+Jenkins + Docker
