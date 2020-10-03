@@ -1,0 +1,14 @@
+// Floating and Clearing Floating
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ' ';
+}
