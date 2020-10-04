@@ -6,13 +6,16 @@
 
 已经集成了以下功能：
 
-- [x] Vuex
-- [x] Vue Router (Use history mode)
-- [x] CSS Pre-processor: `Sass/SCSS (with node-sass)`
-- [x] CSS Automatic imports: `style-resources-loader`
-- [x] CSS resets: `normalize.css`
-- [x] Linter / Formatter: `ESLint + Stylelint + Prettier`
-- [x] Git Hooks: `husky + lint-staged`
+The official router for
+
+- [x] `Vuex`: Vue.js 官方状态管理库
+- [x] `Vue Router`: Vue.js 官方路由库，本项目使用 `history` 模式
+- [x] `axios`: HTTP client
+- [x] `Sass/SCSS (with node-sass)`: CSS 预处理器
+- [x] `style-resources-loader`: CSS Automatic imports
+- [x] `normalize.css`: CSS resets
+- [x] `ESLint + Stylelint + Prettier`: Linter / Formatter
+- [x] `husky + lint-staged`: Git Hooks
 
 以下功能尚未集成：
 
