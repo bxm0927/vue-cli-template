@@ -10,15 +10,6 @@
     "lint:style": "stylelint **/**/*.{css,scss,vue}",
     "deploy": "docker-compose up -d --build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{css,scss,vue}": "stylelint",
-    "*.{js,jsx,vue}": "vue-cli-service lint"
-  },
   "dependencies": {
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
@@ -50,5 +41,19 @@
     "stylelint-order": "^4.1.0",
     "vue-cli-plugin-style-resources-loader": "~0.1.4",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,scss,vue}": "stylelint",
+    "*.{js,jsx,vue}": "vue-cli-service lint"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

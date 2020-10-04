@@ -41,20 +41,14 @@ npm run lint
 
 ## 部署
 
-👉 使用 PM2 部署：
-
-```bash
-pm2 start
-```
-
-👉 使用 Jenkins + Docker 部署：
+使用 Nginx + Docker 部署：
 
 ```bash
 # Build Docker image
-docker build -t vue-cli-template .
+# docker build -t vue-cli-template .
 
 # Run Docker image
-docker run -d -p 9000:80 vue-cli-template
+# docker run -d -p 9000:80 vue-cli-template
 
 # Run Docker image with Docker Compose
 docker-compose up -d --build # or: npm run deploy
