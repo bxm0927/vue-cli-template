@@ -2,8 +2,8 @@
 FROM node:12.18-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
-RUN cnpm install
+RUN npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
+RUN npm install
 COPY . .
 RUN npm run build
 
