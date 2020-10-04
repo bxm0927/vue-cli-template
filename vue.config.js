@@ -4,8 +4,6 @@
  */
 
 const path = require('path')
-console.log('NODE_ENV: ', process.env.NODE_ENV)
-console.log('VUE_APP_TITLE: ', process.env.VUE_APP_TITLE)
 
 module.exports = {
   pluginOptions: {
