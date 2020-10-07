@@ -3,8 +3,8 @@
     <h1>This is an about page</h1>
 
     <p>{{ count }}, {{ doubleCount }}</p>
-    <button @click="add">Add</button>
-    <button @click="fetch">FetchCount</button>
+    <el-button @click="add">Add</el-button>
+    <el-button @click="fetch">FetchCount</el-button>
 
     <ul>
       <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
