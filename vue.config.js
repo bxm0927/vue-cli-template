@@ -13,16 +13,21 @@ module.exports = {
      */
     devServer: {
       proxy: {
-        '/api': {
-          target: 'http://localhost:4000',
+        '/pms_api': {
+          target: 'http://localhost:4001',
           ws: true,
           changeOrigin: true,
+          pathRewrite: { '^/pms_api': '' },
         },
-        '/foo': {
-          target: 'http://localhost:4001',
+        '/crm_api': {
+          target: 'http://localhost:4002',
+          ws: true,
+          changeOrigin: true,
+          pathRewrite: { '^/crm_api': '' },
         },
       },
     },
+
     /**
      * vue-cli-plugin-style-resources-loader
      * https://github.com/nguyenvanduocit/vue-cli-plugin-style-resources-loader

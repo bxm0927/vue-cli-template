@@ -2,17 +2,20 @@
  * Global Store
  */
 
+// initial state
 const state = () => ({
   test: 'Hello Vuex!',
   count: 0,
 })
 
+// getters
 const getters = {
   doubleCount(state) {
     return state.count * 2
   },
 }
 
+// mutations
 const mutations = {
   // 在大多数情况下，载荷(payload)应该是一个对象，
   // 这样可以包含多个字段，并且记录的 mutation 会更易读
@@ -24,6 +27,7 @@ const mutations = {
   },
 }
 
+// actions
 const actions = {
   fetchCount({ commit }, { count }) {
     setTimeout(() => {

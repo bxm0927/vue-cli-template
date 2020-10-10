@@ -15,16 +15,29 @@
 <script>
 import Vue from 'vue'
 import { Button } from 'vant'
+import { getClasses } from '@/apis/classes'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 
 Vue.use(Button)
 
 export default {
+  data() {
+    return {
+      classes: null,
+    }
+  },
+
   computed: {
     ...mapState('global', ['count']),
     ...mapState('todo', ['todos']),
     ...mapGetters('global', ['doubleCount']),
   },
+
+  async mounted() {
+    const result = await getClasses()
+    this.classes = result.data
+  },
+
   methods: {
     ...mapMutations('global', ['increase']),
     ...mapActions('global', ['fetchCount']),

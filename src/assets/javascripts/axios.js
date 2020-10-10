@@ -22,9 +22,11 @@ const errorHandle = (status, msg) => {
   switch (status) {
     case 403:
       // login()
+      Toast.fail(msg)
       break
     case 404:
       // notFound()
+      Toast.fail(msg)
       break
     default:
       Toast.fail(msg)
@@ -55,7 +57,8 @@ instance.interceptors.response.use(
   // Do something with response error
   (error) => {
     if (error.response) {
-      errorHandle(status, error.response.data.message)
+      const { status, statusText, data } = error.response
+      errorHandle(status, data.message || statusText)
     }
     // 处理断网的情况，提示用户重新加载数据
     if (!window.navigator.onLine) {

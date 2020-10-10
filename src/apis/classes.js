@@ -2,34 +2,27 @@
  * 课程模块接口
  */
 
-import axios from '../axios'
-import config from '../../config'
+import axios from '@/assets/javascripts/axios'
 
-const api = config.baseUrl.imooc
+const api = process.env.VUE_APP_IMOOC
 
 /**
  * 获取课程列表
  */
-const getClasses = (params) => {
+export const getClasses = (params) => {
   return axios.get(`${api}/getClasses.php`, { params })
 }
 
 /**
  * 获取课程大纲
  */
-const getClassChapter = (params) => {
+export const getClassChapter = (params) => {
   return axios.get(`${api}/getClassChapter.php`, { params })
 }
 
 /**
  * 获取课程笔记
  */
-const getClassNote = (params) => {
+export const getClassNote = (params) => {
   return axios.get(`${api}/getClassNote.php`, { params })
-}
-
-export default {
-  getClasses,
-  getClassChapter,
-  getClassNote,
 }
