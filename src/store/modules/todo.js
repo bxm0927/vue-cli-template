@@ -1,3 +1,7 @@
+/*
+ * Todo Store
+ */
+
 const state = () => ({
   todos: [
     { id: 1, text: 'Learning Vue', done: true },

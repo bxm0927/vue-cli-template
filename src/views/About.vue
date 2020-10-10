@@ -21,13 +21,13 @@ Vue.use(Button)
 
 export default {
   computed: {
-    ...mapState(['count']),
+    ...mapState('global', ['count']),
     ...mapState('todo', ['todos']),
-    ...mapGetters(['doubleCount']),
+    ...mapGetters('global', ['doubleCount']),
   },
   methods: {
-    ...mapMutations(['increase']),
-    ...mapActions(['fetchCount']),
+    ...mapMutations('global', ['increase']),
+    ...mapActions('global', ['fetchCount']),
     add() {
       this.increase({ count: 10 })
     },
