@@ -3,8 +3,11 @@
  * https://github.com/axios/axios
  */
 
+import Vue from 'vue'
 import axios from 'axios'
-// import { Message } from 'element-ui'
+import { Toast } from 'vant'
+
+Vue.use(Toast)
 
 const instance = axios.create({
   timeout: 10000,
@@ -24,8 +27,7 @@ const errorHandle = (status, msg) => {
       // notFound()
       break
     default:
-      console.log('msg: ', msg)
-      // Message.warning(msg)
+      Toast.fail(msg)
       break
   }
 }
@@ -57,8 +59,7 @@ instance.interceptors.response.use(
     }
     // 处理断网的情况，提示用户重新加载数据
     if (!window.navigator.onLine) {
-      // Message.error('网络请求异常，请稍后重试!')
-      console.log('网络请求异常，请稍后重试!')
+      Toast.fail('网络请求异常，请稍后重试!')
     }
     return Promise.reject(error)
   },

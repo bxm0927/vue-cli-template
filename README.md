@@ -6,9 +6,11 @@
 
 已经集成了以下功能：
 
+- [ ] 基于 Rem 的移动端适配方案
 - [x] `Vuex`: Vue.js 官方状态管理库
 - [x] `Vue Router`: Vue.js 官方路由库，本项目使用 `history` 模式
-- [x] `axios`: HTTP client
+- [x] `axios`: HTTP 客户端
+- [x] `Vant`: 有赞前端团队开源的 Vue.js 移动端组件库，支持按需加载
 - [x] `Sass/SCSS (with node-sass)`: CSS Pre-processor
 - [x] `style-resources-loader`: CSS Automatic imports
 - [x] `normalize.css`: CSS resets
