@@ -25,6 +25,8 @@
 - [ ] E2E Testing
 - [ ] Progressive Web App (PWA) Support
 
+> Tips: 本项目默认为移动端模板项目，PC 端项目需要去掉 `postcss-px-to-viewport`，并将 `Vant` 替换为 `Element UI`.
+
 ## 快速开始
 
 ```bash
